@@ -45,7 +45,9 @@ class ExpressionClass {
             }
         }
 
-        if (str == null) return null
+        if (str == null) {
+            return null
+        }
 
         return "String is $str"
     }
