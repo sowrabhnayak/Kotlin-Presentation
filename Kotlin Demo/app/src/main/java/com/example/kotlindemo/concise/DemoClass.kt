@@ -8,5 +8,5 @@ var optionalString:String? = "String"
 
 fun main(){
     optionalString = _String
-    _String = optionalString
+//    _String = optionalString
 }
