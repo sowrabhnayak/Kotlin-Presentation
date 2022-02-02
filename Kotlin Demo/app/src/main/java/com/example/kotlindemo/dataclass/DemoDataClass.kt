@@ -27,7 +27,7 @@ fun main(){
     println(candidate3)
     repeat(3) { println() }
 
-//    // Java Record
+//    // Java Record   available in Java 14
 //    val javaRecordCandidate1 = JavaFullName("Nayak", "Sowrabh")
 //    val javaRecordCandidate2 = JavaFullName("Nayak", "Sowrabh")
 //    val javaRecordCandidate3 = javaRecordCandidate1.clone()
