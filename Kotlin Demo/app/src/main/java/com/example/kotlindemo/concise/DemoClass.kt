@@ -6,7 +6,7 @@ var _String = "String"
 val optionalInt:Int? = null
 var optionalString:String? = "String"
 
-fun main(){
-    optionalString = _String
+//fun main(){
+//    optionalString = _String
 //    _String = optionalString
-}
+//}
