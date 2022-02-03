@@ -2,10 +2,16 @@ package com.example.kotlindemo._08_delegates
 
 import kotlin.properties.Delegates
 
-class Observable {
+object Observable {
 
-    val observableVariable by Delegates.observable("") { p, old, new ->
+    var observableVariable by Delegates.observable("") { p, old, new ->
         println("${p.name} updated from $old to $new")
     }
 
+}
+
+fun main() {
+    Observable.observableVariable = "Bangalore"
+    Thread.sleep(2000)
+    Observable.observableVariable = "Mysore"
 }

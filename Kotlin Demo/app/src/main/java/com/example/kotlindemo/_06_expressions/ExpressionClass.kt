@@ -2,12 +2,6 @@ package com.example.kotlindemo._06_expressions
 
 class ExpressionClass {
 
-    private val localMutableMap = mutableMapOf<Char, Int>()
-
-    fun addValueToMap(key: Char, value: Int) {
-        localMutableMap[key] = value
-    }
-
     private val localUnMutableMap = mapOf(
         Pair('a', 1),
         Pair('b', 1),
