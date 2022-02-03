@@ -1,4 +1,4 @@
-package com.example.kotlindemo._0_concise;
+package com.example.kotlindemo._00_concise;
 
 public class JavaDemoClass {
 
