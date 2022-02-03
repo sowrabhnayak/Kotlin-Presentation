@@ -10,3 +10,9 @@ var optionalString:String? = "String"
 //    optionalString = _String
 //    _String = optionalString
 //}
+//private var variable = ""
+//    set(value) {
+//        println("Set called on variable with value $value")
+//        field = value.lowercase().trim()
+//        println("Updated the variable value to $field")
+//    }

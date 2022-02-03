@@ -38,5 +38,9 @@ fun main(){
 //    println(javaRecordCandidate3)
 //    repeat(3) { println() }
 
-
+    /**
+     * Deserializing Variables
+     */
+//    val (firstName,lastName) = candidate1
+//    println("$firstName $lastName")
 }
