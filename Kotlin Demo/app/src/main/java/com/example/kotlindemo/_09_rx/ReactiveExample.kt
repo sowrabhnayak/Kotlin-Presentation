@@ -2,6 +2,7 @@ package com.example.kotlindemo._09_rx
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
+import kotlin.math.ceil
 import kotlin.math.min
 
 
@@ -10,10 +11,10 @@ suspend fun main() {
 }
 
 val doughProducer: Flow<List<Dough>> = flow {
-    var doughCount = 0;
+    var doughCount = 0
     while (true) {
         delay(1000)
-        val rand = Math.ceil(Math.random() * 10).toInt()
+        val rand = ceil(Math.random() * 10).toInt()
         val list = mutableListOf<Dough>()
         for (i in 1 until rand + 1) {
             list.add(Dough(doughCount++))
@@ -24,7 +25,7 @@ val doughProducer: Flow<List<Dough>> = flow {
 }
 
 val cheeseProducer: Flow<Cheese> = flow {
-    var cheeseCount = 0;
+    var cheeseCount = 0
     while (true) {
         delay(600)
         println("Cheese Emitted $cheeseCount")
