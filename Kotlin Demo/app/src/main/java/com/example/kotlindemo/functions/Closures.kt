@@ -32,22 +32,18 @@ class Closures {
      * Eg function:
      */
     fun constructFolders(): Component {
-        return Directory(
-            "Main Directory",
-            Directory(
-                    "Profile",
-                FileDetails("personal_details.txt"),
-                FileDetails("username_password.txt")
-            ),
-            Directory(
-                "Documents",
-                FileDetails("pu_marks_card.pdf"),
-                FileDetails("graduation_certificate.pdf")
-            )
+        return Directory("Main Directory",
+                    Directory("Profile",
+                        FileDetails("personal_details.txt"),
+                        FileDetails("username_password.txt")
+                    ),
+                    Directory("Documents",
+                        FileDetails("pu_marks_card.pdf"),
+                        FileDetails("graduation_certificate.pdf")
+                    )
         )
     }
 
     fun getAllFilesInMainDirectory() = constructFolders().extractAllFilesDetails()
-
-
+    val allFilesInMainDiectory = constructFolders().extractAllFilesDetails()
 }
