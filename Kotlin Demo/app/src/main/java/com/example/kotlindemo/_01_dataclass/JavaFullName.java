@@ -1,4 +1,4 @@
-package com.example.kotlindemo.dataclass;
+package com.example.kotlindemo._01_dataclass;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

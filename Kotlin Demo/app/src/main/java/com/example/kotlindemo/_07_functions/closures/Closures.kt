@@ -1,4 +1,4 @@
-package com.example.kotlindemo.functions.closures
+package com.example.kotlindemo._07_functions.closures
 
 abstract class Component
 class Directory(containerName: String, vararg val component: Component) : Component()

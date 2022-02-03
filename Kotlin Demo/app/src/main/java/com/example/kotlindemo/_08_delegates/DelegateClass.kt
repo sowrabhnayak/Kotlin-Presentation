@@ -1,4 +1,4 @@
-package com.example.kotlindemo.delegates
+package com.example.kotlindemo._08_delegates
 
 /**
  * Std Lib Delegate

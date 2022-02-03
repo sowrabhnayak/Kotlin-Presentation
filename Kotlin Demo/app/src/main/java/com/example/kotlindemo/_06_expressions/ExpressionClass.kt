@@ -1,4 +1,4 @@
-package com.example.kotlindemo.expressions
+package com.example.kotlindemo._06_expressions
 
 class ExpressionClass {
 

@@ -1,7 +1,17 @@
-package com.example.kotlindemo.rx
+package com.example.kotlindemo._09_rx
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
+
+
+suspend fun main() {
+    makePizzas()
+}
+
+// Dough -> Pizza Bread -> Pizza
+//              Cheese ->
+
+
 
 val doughProducer: Flow<List<Dough>> = flow {
     var doughCount = 0;
@@ -38,16 +48,12 @@ val pizza: Flow<Pizza> =
     pizzaBread.zip<PizzaBread, Cheese, Pizza>(cheeseProducer) { pizzaBread, cheese ->
         val index = Math.min(pizzaBread.index, cheese.index)
         delay(5000)
-        println("Pizza emitted $index")
+        println("Pizza $index emitted ")
         Pizza(index)
     }
 
-suspend fun main() {
-    makePizzas()
-}
-
 suspend fun makePizzas() {
-    pizza.collect { println("Pizza ${it.index}") }
+    pizza.collect { println("Served Pizza ${it.index}") }
 }
 
 class Dough(val index: Int)

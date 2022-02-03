@@ -1,4 +1,4 @@
-package com.example.kotlindemo.dataclass;
+package com.example.kotlindemo._01_dataclass;
 
 /**
  *  Released in Java 14

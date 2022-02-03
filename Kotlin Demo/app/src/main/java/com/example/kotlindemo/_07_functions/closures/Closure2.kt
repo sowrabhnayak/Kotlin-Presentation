@@ -1,4 +1,4 @@
-package com.example.kotlindemo.functions.closures
+package com.example.kotlindemo._07_functions.closures
 
 val outer = fun(): () -> Unit {
     var a = "Data"

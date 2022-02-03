@@ -1,4 +1,4 @@
-package com.example.kotlindemo.extenstions
+package com.example.kotlindemo._03_extenstions
 
 val malayalam = "Malayalam";
 val random = "random"

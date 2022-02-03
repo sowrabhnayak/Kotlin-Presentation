@@ -1,4 +1,4 @@
-package com.example.kotlindemo.scope
+package com.example.kotlindemo._05_scope
 
 data class ViewDetails(
     val length: Int,
