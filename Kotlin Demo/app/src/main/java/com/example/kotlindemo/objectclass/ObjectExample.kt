@@ -1,4 +1,4 @@
-package com.example.kotlindemo
+package com.example.kotlindemo.objectclass
 
 object Preferences {
     fun getSetting1(){}

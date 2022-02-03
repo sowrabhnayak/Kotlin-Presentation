@@ -1,12 +1,13 @@
-package com.example.kotlindemo.functions
+package com.example.kotlindemo.functions.closures
 
-val outer = fun():()->Unit{
+val outer = fun(): () -> Unit {
     var a = "Data"
     var inner = fun() {
         println(a)
     }
-    return inner; // this returns a function
+    return inner // this returns a function
 }
-fun main(){
+
+fun main() {
     outer.invoke().invoke()
 }

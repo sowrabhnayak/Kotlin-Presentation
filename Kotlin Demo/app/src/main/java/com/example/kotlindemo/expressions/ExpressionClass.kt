@@ -19,13 +19,13 @@ class ExpressionClass {
     )
 
     fun printMap() {
-        for((key, value) in localUnMutableMap) {
+        for ((key, value) in localUnMutableMap) {
             println("$key -> $value")
         }
     }
 
     fun applyWhen(char: Char): String {
-        when(char) {
+        when (char) {
             'a' -> return "Part of first Category"
             'b' -> return "Part of first Category"
             'd' -> return "Part of second Category"
