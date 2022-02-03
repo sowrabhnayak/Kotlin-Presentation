@@ -1,4 +1,4 @@
-package com.example.kotlindemo.functions
+package com.example.kotlindemo.functions.lambdas
 
 import android.os.Build
 import android.view.View

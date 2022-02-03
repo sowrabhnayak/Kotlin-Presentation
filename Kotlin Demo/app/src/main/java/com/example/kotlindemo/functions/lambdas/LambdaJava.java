@@ -1,4 +1,4 @@
-package com.example.kotlindemo.functions;
+package com.example.kotlindemo.functions.lambdas;
 
 import static android.view.View.GONE;
 
@@ -11,7 +11,7 @@ import androidx.annotation.RequiresApi;
 
 import java.util.function.Consumer;
 
-public class FunctionsJava {
+public class LambdaJava {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void processResponse(String response, Consumer<ResponseEnum> callback) {
