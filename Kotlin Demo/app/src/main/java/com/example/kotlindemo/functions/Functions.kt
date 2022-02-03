@@ -1,7 +1,5 @@
 package com.example.kotlindemo.functions
 
-import com.example.kotlindemo.functions.SingletonUtilClass.firstWord
-
 class Functions {
 
     private var variable = ""
