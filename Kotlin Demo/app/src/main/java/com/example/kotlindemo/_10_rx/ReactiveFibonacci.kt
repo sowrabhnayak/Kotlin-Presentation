@@ -8,10 +8,10 @@ import kotlinx.coroutines.flow.flow
 private val coroutineScope = CoroutineScope(Job())
 
 fun main() {
-    println("Thread: ${Thread.currentThread()}")
+    printCurrentThread()
     val job = coroutineScope.launch {
-        println("Thread: ${Thread.currentThread()}")
-        collectNumbers()
+        printCurrentThread()
+        collectFibonacciNumbers()
     }
     coroutineScope.launch {
         delay(10000)
@@ -24,6 +24,10 @@ fun main() {
 private fun keepMainThreadAlive(job: Job) {
     while (job.isActive) {
     }
+}
+
+private fun printCurrentThread() {
+    println("Thread: ${Thread.currentThread()}")
 }
 
 fun fibonacci(): Flow<Int> = flow {
@@ -39,7 +43,7 @@ fun fibonacci(): Flow<Int> = flow {
     }
 }
 
-suspend fun collectNumbers() {
+suspend fun collectFibonacciNumbers() {
     fibonacci().collect {
         println("$it")
     }

@@ -8,7 +8,9 @@ import kotlin.math.min
 private val coroutineScope = CoroutineScope(Job())
 
 fun main() {
+    printCurrentThread()
     val job = coroutineScope.launch {
+        printCurrentThread()
         makePizzas()
     }
     coroutineScope.launch {
@@ -22,6 +24,10 @@ fun main() {
 private fun keepMainThreadAlive(job: Job) {
     while (job.isActive) {
     }
+}
+
+private fun printCurrentThread() {
+    println("Thread: ${Thread.currentThread()}")
 }
 
 val doughProducer: Flow<List<Dough>> = flow {
