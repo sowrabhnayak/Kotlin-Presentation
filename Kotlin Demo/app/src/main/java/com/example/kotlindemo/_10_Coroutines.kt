@@ -5,8 +5,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.lang.Thread.sleep
 
-val noOfRunnables = 10000L
-val sleepTime = 5000L
+const val noOfRunnable = 10000L
+const val sleepTime = 5000L
 
 fun main() {
     threadSample()
@@ -14,7 +14,7 @@ fun main() {
 }
 
 fun threadSample() {
-    for (i in 1..noOfRunnables) {
+    for (i in 1..noOfRunnable) {
         Thread {
             sleep(sleepTime)
             println(i)
@@ -23,7 +23,7 @@ fun threadSample() {
 }
 
 fun coroutineSample() = runBlocking {
-    for (i in 1..noOfRunnables) {
+    for (i in 1..noOfRunnable) {
         launch {
             delay(sleepTime)
             println(i)

@@ -4,9 +4,12 @@ abstract class Component
 class Directory(containerName: String, vararg val component: Component) : Component()
 class FileDetails(val fileName: String): Component()
 
-class Closures {
+object Closures {
 
-    fun Component.extractAllFilesDetails(): List<FileDetails> {
+    /**
+     * Function extracts all the FileDetail objects from Input Directory
+     */
+    private fun Component.extractAllFilesDetails(): List<FileDetails> {
         val fileDetails = mutableListOf<FileDetails>()
 
         /**
@@ -31,7 +34,7 @@ class Closures {
     /**
      * Eg function:
      */
-    fun constructFolders(): Component {
+    private fun constructFolders(): Component {
         return Directory("Main Directory",
                     Directory("Profile",
                         FileDetails("personal_details.txt"),
@@ -45,5 +48,15 @@ class Closures {
     }
 
     fun getAllFilesInMainDirectory() = constructFolders().extractAllFilesDetails()
-    val allFilesInMainDiectory = constructFolders().extractAllFilesDetails()
+
+    val allFilesInMainDirectoryVal = constructFolders().extractAllFilesDetails()
+}
+
+fun main() {
+    val files = Closures.allFilesInMainDirectoryVal
+    val filesList = Closures.getAllFilesInMainDirectory()
+
+    filesList.forEach {
+        println("$it")
+    }
 }
