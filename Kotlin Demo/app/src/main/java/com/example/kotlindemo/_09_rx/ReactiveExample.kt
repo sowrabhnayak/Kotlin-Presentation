@@ -2,6 +2,7 @@ package com.example.kotlindemo._09_rx
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
+import kotlin.math.min
 
 
 suspend fun main() {
@@ -41,7 +42,7 @@ val pizzaBread: Flow<PizzaBread> = doughProducer.transform { doughList ->
 
 val pizza: Flow<Pizza> =
     pizzaBread.zip<PizzaBread, Cheese, Pizza>(cheeseProducer) { pizzaBread, cheese ->
-        val index = Math.min(pizzaBread.index, cheese.index)
+        val index = min(pizzaBread.index, cheese.index)
         delay(5000)
         println("Pizza $index emitted ")
         Pizza(index)
