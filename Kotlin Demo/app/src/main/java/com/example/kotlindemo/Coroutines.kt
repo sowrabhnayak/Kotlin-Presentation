@@ -11,7 +11,7 @@ fun main(){
 }
 
 fun threadSample() {
-    for(i in 1..10000){
+    for(i in 1..100000){
         Thread {
             sleep(1000)
             println(i)
@@ -20,7 +20,7 @@ fun threadSample() {
 }
 
 fun coroutineSample() = runBlocking {
-    for(i in 1..10000){
+    for(i in 1..100000){
         launch {
             delay(1000L)
             println(i)
